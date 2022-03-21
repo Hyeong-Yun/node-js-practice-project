@@ -1,0 +1,30 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "make blog",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hyeong-Yun/node-js-practice-project.git"
+  },
+  "author": "Hyeong-Yun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hyeong-Yun/node-js-practice-project/issues"
+  },
+  "homepage": "https://github.com/Hyeong-Yun/node-js-practice-project#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^5.0.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
