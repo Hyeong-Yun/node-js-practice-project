@@ -1,5 +1,6 @@
 {
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#6b9bdb"
-  }
+  },
+  "js/ts.implicitProjectConfig.strictNullChecks": true
 }
