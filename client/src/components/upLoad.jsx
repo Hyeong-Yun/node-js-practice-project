@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./anotherHeader";
 
-const UpLoad = ({ uploadService }) => {
+const UpLoad = ({ contentService }) => {
   const [title, setTitle] = useState("");
   const [videoUrl, setVideoUrl] = useState("");
   const [description, setDescription] = useState("");
@@ -10,7 +10,7 @@ const UpLoad = ({ uploadService }) => {
   const onSubmit = (e) => {
     console.log("in");
     e.preventDefault();
-    uploadService
+    contentService
       .postData(title, videoUrl, description, content)
       .then((result) => {
         console.log(result);

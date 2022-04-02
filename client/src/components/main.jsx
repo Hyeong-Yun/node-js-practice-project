@@ -3,12 +3,12 @@ import Header from "./header.jsx";
 import Search from "./search";
 import List from "./list";
 
-const Main = () => {
+const Main = ({ contentService }) => {
   return (
     <>
       <Header />
       <Search />
-      <List />
+      <List contentService={contentService} />
     </>
   );
 };

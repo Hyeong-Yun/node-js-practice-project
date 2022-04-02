@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const List = () => {
+const List = ({ contentService }) => {
+  useEffect(() => {
+    contentService
+      .getAll()
+      .then((res) => console.log(res))
+      .then((data) => console.log(data));
+  }, []);
+
   return (
     <>
       <div className="w-6/12 h-32 bg-indigo-400 absolute top-56 left-1/2 -translate-x-1/2 max-w-4xl">

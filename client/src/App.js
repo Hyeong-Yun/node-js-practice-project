@@ -3,14 +3,14 @@ import { Route, Routes } from "react-router-dom";
 import Main from "./components/main";
 import UpLoad from "./components/upLoad";
 
-function App({ uploadService }) {
+function App({ contentService }) {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Main contentService={contentService} />} />
         <Route
           path="upLoad"
-          element={<UpLoad uploadService={uploadService} />}
+          element={<UpLoad contentService={contentService} />}
         />
       </Routes>
     </div>
