@@ -30,13 +30,14 @@ export default class ContentService {
     const response = await fetch(`${this.baseUrl}/content`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
-    }).then((result) => console.log(result));
+    });
 
     const data = await response.json();
 
     if (response.status !== 200) {
       throw new Error(data.message);
     }
+
     return data;
   }
 }

@@ -1,11 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import ItemDetail from "./itemDetail.jsx";
 
 const List = ({ contentService }) => {
+  const [list, setList] = useState([]);
+
   useEffect(() => {
-    contentService
-      .getAll()
-      .then((res) => console.log(res))
-      .then((data) => console.log(data));
+    contentService.getAll().then((res) => {
+      setList(res);
+    });
+    console.log(list);
   }, []);
 
   return (
@@ -14,6 +17,12 @@ const List = ({ contentService }) => {
         <ul className="w-32 bg-red-300 flex justify-center ml-auto mr-auto">
           <li className="pr-2 cursor-pointer">최신순</li>
           <li className="cursor-pointer">인기순</li>
+        </ul>
+        <ul className="flex">
+          {list &&
+            list.map((item) => (
+              <ItemDetail key={item.id} item={item}></ItemDetail>
+            ))}
         </ul>
       </div>
     </>
