@@ -6,10 +6,12 @@ import List from "./list";
 const Main = ({ contentService }) => {
   return (
     <>
-      <div className="w-1230 ml-auto mr-auto">
-        <Header />
-        <Search />
-        <List contentService={contentService} />
+      <div className="h-screen">
+        <div className="w-1240 ml-auto mr-auto">
+          <Header />
+          <Search />
+          <List contentService={contentService} />
+        </div>
       </div>
     </>
   );

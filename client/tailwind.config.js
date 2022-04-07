@@ -4,12 +4,11 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        1230: "1230px",
+        1240: "1240px",
         450: "450px",
+        600: "600px",
       },
-      backgroundImage: {
-        "header-img": "url(img/header-img)",
-      },
+      backgroundImage: {},
     },
   },
   variants: {

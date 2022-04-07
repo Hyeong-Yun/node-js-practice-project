@@ -6,9 +6,9 @@ const ItemDetail = ({ item }) => {
     <li>
       <ul>
         <li>{title}</li>
-        <li>{videoUrl}</li>
+        {/* <li>{videoUrl}</li>
         <li>{description}</li>
-        <li>{content}</li>
+        <li>{content}</li> */}
       </ul>
     </li>
   );
