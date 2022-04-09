@@ -13,8 +13,8 @@ const List = ({ contentService }) => {
 
   return (
     <>
-      <div className="w-full h-32 bg-gray-400">
-        <ul className="flex">
+      <div className="w-full h-32 p-4">
+        <ul className="flex flex-wrap justify-center">
           {list &&
             list.map((item) => (
               <ItemDetail key={item.id} item={item}></ItemDetail>

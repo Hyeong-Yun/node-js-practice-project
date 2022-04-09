@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "./anotherHeader";
+import Header from "../components/anotherHeader";
 
 const UpLoad = ({ contentService }) => {
   const [title, setTitle] = useState("");

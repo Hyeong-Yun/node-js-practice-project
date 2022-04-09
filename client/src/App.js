@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Main from "./components/main";
-import UpLoad from "./components/upLoad";
+import Main from "./pages/main";
+import UpLoad from "./pages/upLoad";
 
 function App({ contentService }) {
   return (

@@ -1,7 +1,14 @@
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 const Search = () => {
+  const navigate = useNavigate();
+
+  const onClcikNavigate = () => {
+    navigate("/upload");
+  };
+
   return (
     <div className="w-full flex my-10">
       <div className="flex ml-auto mr-auto">
@@ -19,7 +26,10 @@ const Search = () => {
         </div>
         <p className="px-4 flex items-center">or</p>
         <div>
-          <button className="bg-orange-600 p-2 px-4 text-white rounded-md ">
+          <button
+            className="bg-orange-600 p-2 px-4 text-white rounded-md"
+            onClick={onClcikNavigate}
+          >
             Upload your own
           </button>
         </div>

@@ -1,14 +1,14 @@
 import React from "react";
 
 const ItemDetail = ({ item }) => {
-  const { title, videoUrl, description, content } = item;
+  const { title, videoUrl, description, content, url } = item;
   return (
-    <li>
+    <li className="mb-4">
       <ul>
-        <li>{title}</li>
-        {/* <li>{videoUrl}</li>
-        <li>{description}</li>
-        <li>{content}</li> */}
+        <li>
+          <img src={url} className="w-180 h-180 mr-4 "></img>
+          <li>{title}</li>
+        </li>
       </ul>
     </li>
   );
