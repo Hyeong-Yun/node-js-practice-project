@@ -27,7 +27,6 @@ const Main = ({ contentService }) => {
           ></div>
         </div>
       ) : null}
-
       <div className="bg-gray-100">
         <div className="h-screen w-1240 ml-auto mr-auto bg-white">
           <Header setModal={setModal} />

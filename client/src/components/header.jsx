@@ -8,8 +8,13 @@ const Header = ({ setModal }) => {
   return (
     <header
       className={
-        "text-gray-100 relative flex h-450 w-full flex justify-center bg-gray-500 text-center p-4 align-middle text-xl"
+        "text-gray-100 border-t-8 border-orange-600 relative flex h-450 w-full flex justify-center bg-gray-500 text-center p-4 align-middle text-xl"
       }
+      style={{
+        backgroundImage: "url(/assets/headerImg.png)",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
     >
       <div className="w-full relative">
         <ul className="flex right-0 absolute">
