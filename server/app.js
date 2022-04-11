@@ -3,7 +3,8 @@ import cors from "cors";
 import morgan from "morgan";
 import helmet from "helmet";
 import "express-async-errors";
-import contentRoute from "./router/content.js";
+import contentRouter from "./router/content.js";
+import authRouter from "./router/auth.js";
 
 const app = express();
 
@@ -12,7 +13,8 @@ app.use(helmet());
 app.use(morgan("tiny"));
 app.use(cors());
 
-app.use("/content", contentRoute);
+app.use("/content", contentRouter);
+app.use("/auth", authRouter);
 
 app.use((req, res, next) => {
   res.sendStatus(404);

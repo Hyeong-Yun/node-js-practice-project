@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/header.jsx";
 import Search from "../components/search";
 import List from "../components/list";
+import Login from "../pages/login";
 
 const Main = ({ contentService }) => {
   const [modal, setModal] = useState(false);
+  const [accountPage, setAccountPage] = useState(false);
 
   const handleOnclick = () => {
     setModal(false);
@@ -24,7 +26,17 @@ const Main = ({ contentService }) => {
           <div
             onClick={(e) => e.stopPropagation()}
             className="bg-white my-20 mx-auto w-450 h-600"
-          ></div>
+          >
+            {accountPage ? (
+              <>
+                <Login></Login>
+              </>
+            ) : (
+              <>
+                <button onClick={setAccountPage(true)}>make account</button>
+              </>
+            )}
+          </div>
         </div>
       ) : null}
       <div className="bg-gray-100">
